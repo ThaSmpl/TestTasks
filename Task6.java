@@ -17,22 +17,19 @@ public class Task6
     public static void main(String[] args) throws IOException 
     {
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-        // множество цифр
-        Set<String> numbers = Set.of("0","1","2","3","4","5","6","7","8","9");
         System.out.println("Введите текст:");
         // используем StringBuilder, т.к. данные строки можно изменять напрямую
         StringBuilder text = new StringBuilder(consoleReader.readLine());
         int i = 0;
         while (i < text.length())   // просматриваем текст посимвольно
         {
-            // если символ содержится в множестве цифр, то удаляем его из строки
-            if (numbers.contains(String.valueOf(text.charAt(i))))
+            // если символ - цифра, то удаляем его из строки
+            if (Character.isDigit(text.charAt(i)))
                 text.delete(i,i+1);
             else 
                 i++;
         }
         System.out.println("Текст после удаления чисел:");
         System.out.println(text);
-    }
-    
+    }  
 }
