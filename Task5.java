@@ -15,21 +15,21 @@ public class Task5
     {
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
         String word;
-        System.out.println("Введите слово:");
+        System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г±Г«Г®ГўГ®:");
         word = consoleReader.readLine().toLowerCase();
         int i = 0;
-        // сравниваем первый символ с последним, второй - с предпоследним и т.д.
+        // Г±Г°Г ГўГ­ГЁГўГ ГҐГ¬ ГЇГҐГ°ГўГ»Г© Г±ГЁГ¬ГўГ®Г« Г± ГЇГ®Г±Г«ГҐГ¤Г­ГЁГ¬, ГўГІГ®Г°Г®Г© - Г± ГЇГ°ГҐГ¤ГЇГ®Г±Г«ГҐГ¤Г­ГЁГ¬ ГЁ ГІ.Г¤
         while (word.charAt(i) == word.charAt(word.length()-i-1))
         {
-            if (i == word.length()/2)   // если дошли до середины строки
+            if (i == word.length()/2)   // ГҐГ±Г«ГЁ Г¤Г®ГёГ«ГЁ Г¤Г® Г±ГҐГ°ГҐГ¤ГЁГ­Г» Г±ГІГ°Г®ГЄГЁ
             {
-                System.out.println("Слово "+word+" является палиндромом");    // значит слово - палиндром
+                System.out.println("Г‘Г«Г®ГўГ® "+word+" ГїГўГ«ГїГҐГІГ±Гї ГЇГ Г«ГЁГ­Г¤Г°Г®Г¬Г®Г¬");    // Г§Г­Г Г·ГЁГІ Г±Г«Г®ГўГ® - ГЇГ Г«ГЁГ­Г¤Г°Г®Г¬
                 return;
             }
             else
                 i++;
         }
-        System.out.println("Слово "+word+" не является палиндромом");
+        System.out.println("Г‘Г«Г®ГўГ® "+word+" Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї ГЇГ Г«ГЁГ­Г¤Г°Г®Г¬Г®Г¬");
     }
     
 }
