@@ -17,21 +17,21 @@ public class Task6
     public static void main(String[] args) throws IOException 
     {
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-        // множество цифр
+        // РјРЅРѕР¶РµСЃС‚РІРѕ С†РёС„СЂ
         Set<String> numbers = Set.of("0","1","2","3","4","5","6","7","8","9");
-        System.out.println("Введите текст:");
-        // используем StringBuilder, т.к. данные строки можно изменять напрямую
+        System.out.println("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚:");
+        // РёСЃРїРѕР»СЊР·СѓРµРј StringBuilder, С‚.Рє. РґР°РЅРЅС‹Рµ СЃС‚СЂРѕРєРё РјРѕР¶РЅРѕ РёР·РјРµРЅСЏС‚СЊ РЅР°РїСЂСЏРјСѓСЋ
         StringBuilder text = new StringBuilder(consoleReader.readLine());
         int i = 0;
-        while (i < text.length())   // просматриваем текст посимвольно
+        while (i < text.length())   // РїСЂРѕСЃРјР°С‚СЂРёРІР°РµРј С‚РµРєСЃС‚ РїРѕСЃРёРјРІРѕР»СЊРЅРѕ
         {
-            // если символ содержится в множестве цифр, то удаляем его из строки
+            // РµСЃР»Рё СЃРёРјРІРѕР» СЃРѕРґРµСЂР¶РёС‚СЃСЏ РІ РјРЅРѕР¶РµСЃС‚РІРµ С†РёС„СЂ, С‚Рѕ СѓРґР°Р»СЏРµРј РµРіРѕ РёР· СЃС‚СЂРѕРєРё
             if (numbers.contains(String.valueOf(text.charAt(i))))
                 text.delete(i,i+1);
             else 
                 i++;
         }
-        System.out.println("Текст после удаления чисел:");
+        System.out.println("РўРµРєСЃС‚ РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ С‡РёСЃРµР»:");
         System.out.println(text);
     }
     

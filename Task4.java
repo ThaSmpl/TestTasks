@@ -13,21 +13,21 @@ public class Task4
     public static void main(String[] args) throws IOException
     {
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-        int trueCount = 0; // счетчик истинных значений
+        int trueCount = 0; // СЃС‡РµС‚С‡РёРє РёСЃС‚РёРЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№
         int i = 0;
-        // продолжаем ввод до тех пор, пока не получим 4 корректных значения
+        // РїСЂРѕРґРѕР»Р¶Р°РµРј РІРІРѕРґ РґРѕ С‚РµС… РїРѕСЂ, РїРѕРєР° РЅРµ РїРѕР»СѓС‡РёРј 4 РєРѕСЂСЂРµРєС‚РЅС‹С… Р·РЅР°С‡РµРЅРёСЏ
         while (i < 4)
         {
-            System.out.println("Введите 'True' или 'False':");
+            System.out.println("Р’РІРµРґРёС‚Рµ 'True' РёР»Рё 'False':");
             String temp = consoleReader.readLine();
-            if (Boolean.valueOf(temp))  // преобразуем строку в логическое значение
+            if (Boolean.valueOf(temp))  // РїСЂРµРѕР±СЂР°Р·СѓРµРј СЃС‚СЂРѕРєСѓ РІ Р»РѕРіРёС‡РµСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ
             {
                 trueCount++;    
                 i++;
             }
             else if (!Boolean.valueOf(temp))
                 i++;
-            else System.out.println("Некорректное значение. Попробуйте еще раз.");
+            else System.out.println("РќРµРєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
         }
         if (trueCount == 2)
             System.out.println("True");

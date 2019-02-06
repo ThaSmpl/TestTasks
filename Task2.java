@@ -17,12 +17,12 @@ public class Task2
      * @param args the command line arguments
      * @return 
      */
-    private static int []fibArray; // массив для хранения уже вычисленных чисел Фибоначчи
+    private static int []fibArray; // РјР°СЃСЃРёРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СѓР¶Рµ РІС‹С‡РёСЃР»РµРЅРЅС‹С… С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё
     public static int f(int n)
     {
         /**
-         * Функция, вычисляющая n-е число Фибоначчи
-         * @param n - номер числа Фибоначчи
+         * Р¤СѓРЅРєС†РёСЏ, РІС‹С‡РёСЃР»СЏСЋС‰Р°СЏ n-Рµ С‡РёСЃР»Рѕ Р¤РёР±РѕРЅР°С‡С‡Рё
+         * @param n - РЅРѕРјРµСЂ С‡РёСЃР»Р° Р¤РёР±РѕРЅР°С‡С‡Рё
          */    
         if (fibArray[n] == 0)
             if (n<2)
@@ -37,18 +37,18 @@ public class Task2
         String input;
         do 
         {
-            System.out.println("Введите N:");
+            System.out.println("Р’РІРµРґРёС‚Рµ N:");
             input = consoleReader.readLine();
         } 
         while (!input.matches("^[1-9]+\\d*$"));
-        int N = Integer.parseInt(input);    // верхняя граница диапазона
-        // Вычисление количества чисел Фибоначчи в диапазоне
+        int N = Integer.parseInt(input);    // РІРµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° РґРёР°РїР°Р·РѕРЅР°
+        // Р’С‹С‡РёСЃР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё РІ РґРёР°РїР°Р·РѕРЅРµ
         double sqrt5 = Math.sqrt(5.0);
         double logPhi = Math.log((1+sqrt5)/2);
-        int n = (int)Math.floor(Math.log((N+0.5)*sqrt5)/logPhi); // Формула Бине
-        fibArray = new int[n]; // выделяем нужное количество памяти под массив
+        int n = (int)Math.floor(Math.log((N+0.5)*sqrt5)/logPhi); // Р¤РѕСЂРјСѓР»Р° Р‘РёРЅРµ
+        fibArray = new int[n]; // РІС‹РґРµР»СЏРµРј РЅСѓР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°РјСЏС‚Рё РїРѕРґ РјР°СЃСЃРёРІ
         f(n-1);
-        System.out.println("В диапазоне от 1 до "+N+" есть "+n+" чисел Фибоначчи:");
+        System.out.println("Р’ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 1 РґРѕ "+N+" РµСЃС‚СЊ "+n+" С‡РёСЃРµР» Р¤РёР±РѕРЅР°С‡С‡Рё:");
         System.out.println(Arrays.toString(fibArray));
     }
 }

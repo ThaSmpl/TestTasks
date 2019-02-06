@@ -9,21 +9,21 @@ public class Task3
   public static void main(String []argv) throws IOException
   {
     BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-    // Т.к обычный массив имеет фиксированный размер, используем списочный массив
+    // Рў.Рє РѕР±С‹С‡РЅС‹Р№ РјР°СЃСЃРёРІ РёРјРµРµС‚ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РјРµСЂ, РёСЃРїРѕР»СЊР·СѓРµРј СЃРїРёСЃРѕС‡РЅС‹Р№ РјР°СЃСЃРёРІ
     ArrayList<Integer> arrayInt = new ArrayList<Integer>();
     String input;
     do
     {
-        System.out.println("Введите массив чисел через пробел");
+        System.out.println("Р’РІРµРґРёС‚Рµ РјР°СЃСЃРёРІ С‡РёСЃРµР» С‡РµСЂРµР· РїСЂРѕР±РµР»");
         input = consoleReader.readLine();
     } while (!input.matches("^([1-9]+\\d*\\s?){1,}$"));
-    // Выбираем числа из входной строки и добавляем их в массив
+    // Р’С‹Р±РёСЂР°РµРј С‡РёСЃР»Р° РёР· РІС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё Рё РґРѕР±Р°РІР»СЏРµРј РёС… РІ РјР°СЃСЃРёРІ
     StringTokenizer tokenizer = new StringTokenizer(input," ");
     while (tokenizer.hasMoreTokens())
     {
         arrayInt.add(Integer.valueOf(tokenizer.nextToken()));
     }
-    // сортировка вставками
+    // СЃРѕСЂС‚РёСЂРѕРІРєР° РІСЃС‚Р°РІРєР°РјРё
     for (int i = 1; i < arrayInt.size(); i++)
     {
         int j = i - 1;
@@ -35,7 +35,7 @@ public class Task3
         }
         arrayInt.set(j+1, temp);
     }
-    System.out.println("Результат сортировки:");
+    System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ СЃРѕСЂС‚РёСЂРѕРІРєРё:");
     System.out.println(arrayInt.toString());
   }
 }
