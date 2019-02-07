@@ -15,19 +15,14 @@ public class Task4
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
         int trueCount = 0; // счетчик истинных значений
         int i = 0;
-        // продолжаем ввод до тех пор, пока не получим 4 корректных значения
+        // продолжаем ввод до тех пор, пока не получим 4 значения
         while (i < 4)
         {
             System.out.println("Введите 'True' или 'False':");
             String temp = consoleReader.readLine();
             if (Boolean.valueOf(temp))  // преобразуем строку в логическое значение
-            {
                 trueCount++;    
-                i++;
-            }
-            else if (!Boolean.valueOf(temp))
-                i++;
-            else System.out.println("Некорректное значение. Попробуйте еще раз.");
+            i++;
         }
         if (trueCount == 2)
             System.out.println("True");
